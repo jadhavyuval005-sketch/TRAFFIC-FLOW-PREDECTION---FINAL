@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Traffic AI System</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <section id="loginPage" class="page active-page">
+
+    <div class="auth-container">
+
+      <div class="auth-left">
+
+        <div class="logo">
+          🚦 Smart Traffic AI
+        </div>
+
+        <h1>Welcome Back</h1>
+
+        <p>
+          Login to access AI traffic prediction and analytics dashboard.
+        </p>
+
+      </div>
+
+      <div class="auth-right">
+
+        <div class="auth-box">
+
+          <h2>Login</h2>
+
+          <form id="loginForm">
+
+            <div class="input-group">
+              <label>Email</label>
+              <input type="email" placeholder="Enter your email">
+            </div>
+
+            <div class="input-group">
+              <label>Password</label>
+              <input type="password" placeholder="Enter password">
+            </div>
+
+            <button type="submit" class="auth-btn">
+              Login
+            </button>
+
+          </form>
+
+          <p class="bottom-text">
+            Don't have an account?
+            <a href="#" id="showSignup">
+              Sign Up
+            </a>
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="signupPage" class="page">
+
+    <div class="auth-container">
+
+      <div class="auth-left">
+
+        <div class="logo">
+          🚦 Smart Traffic AI
+        </div>
+
+        <h1>Create Account</h1>
+
+        <p>
+          Join the AI Traffic Monitoring Platform today.
+        </p>
+
+      </div>
+
+      <div class="auth-right">
+
+        <div class="auth-box">
+
+          <h2>Sign Up</h2>
+
+          <form id="signupForm">
+
+            <div class="input-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="Enter full name">
+            </div>
+
+            <div class="input-group">
+              <label>Email</label>
+              <input type="email" placeholder="Enter email">
+            </div>
+
+            <div class="input-group">
+              <label>Password</label>
+              <input type="password" placeholder="Create password">
+            </div>
+
+            <button type="submit" class="auth-btn">
+              Create Account
+            </button>
+
+          </form>
+
+          <p class="bottom-text">
+            Already have an account?
+            <a href="#" id="showLogin">
+              Login
+            </a>
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="trafficPage" class="page">
+
+    <div class="container">
+
+      <div class="left-section">
+
+        <div class="tag">
+          AI Powered Smart Traffic Analytics
+        </div>
+
+        <h1>
+          Smart Traffic
+          <span>Flow Prediction</span>
+        </h1>
+
+        <p>
+          Predict real-time traffic congestion using AI & machine learning.
+          Monitor traffic density, weather impact, accident alerts,
+          and intelligent route optimization.
+        </p>
+
+        <div class="features">
+
+          <div class="feature-card">
+            <h3>Live AI Prediction</h3>
+            <p>Instant traffic forecasting</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Weather Analysis</h3>
+            <p>Rain & visibility impact</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Peak Hour Detection</h3>
+            <p>Rush hour monitoring</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Smart Route Suggestion</h3>
+            <p>Fastest route optimization</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="form-container">
+
+        <div class="form-box">
+
+          <div class="top-header">
+
+            <div>
+              <h2>Traffic Prediction</h2>
+              <p>Enter live traffic details</p>
+            </div>
+
+            <div class="icon">
+              🚦
+            </div>
+
+          </div>
+
+          <form id="trafficForm">
+
+            <div class="input-group">
+              <label>Hour</label>
+
+              <input
+                type="number"
+                id="hour"
+                placeholder="Enter hour (1-24)"
+              >
+            </div>
+
+            <div class="input-group">
+              <label>Vehicle Count</label>
+
+              <input
+                type="number"
+                id="vehicle"
+                placeholder="Enter vehicle count"
+              >
+            </div>
+
+            <div class="input-group">
+              <label>Average Speed</label>
+
+              <input
+                type="number"
+                id="speed"
+                placeholder="Enter average speed"
+              >
+            </div>
+
+            <div class="row">
+
+              <div class="input-group">
+                <label>Weather</label>
+
+                <select>
+                  <option>Sunny</option>
+                  <option>Rainy</option>
+                  <option>Foggy</option>
+                  <option>Cloudy</option>
+                </select>
+              </div>
+
+              <div class="input-group">
+                <label>Road Condition</label>
+
+                <select>
+                  <option>Normal</option>
+                  <option>Busy</option>
+                  <option>Accident</option>
+                  <option>Construction</option>
+                </select>
+              </div>
+
+            </div>
+
+            <div class="input-group">
+
+              <label>Traffic Zone</label>
+
+              <select>
+                <option>City Center</option>
+                <option>Highway</option>
+                <option>Residential Area</option>
+                <option>Industrial Zone</option>
+              </select>
+
+            </div>
+
+            <div class="meter-box">
+
+              <div class="meter-text">
+                <span>Traffic Density</span>
+                <span id="densityValue">75%</span>
+              </div>
+
+              <div class="meter-bar">
+                <div class="meter-fill" id="meterFill"></div>
+              </div>
+
+            </div>
+
+            <div class="button-group">
+
+              <button type="submit" class="predict-btn">
+                Predict Traffic
+              </button>
+
+              <button type="reset" class="reset-btn">
+                Reset
+              </button>
+
+            </div>
+
+          </form>
+
+          <div class="result-box">
+
+            <div class="result-top">
+
+              <div>
+                <p>Predicted Traffic Status</p>
+                <h3 id="trafficStatus">Moderate Traffic</h3>
+              </div>
+
+              <div class="car-icon">
+                🚗
+              </div>
+
+            </div>
+
+            <div class="result-message" id="resultMessage">
+              AI prediction results will appear here.
+            </div>
+
+          </div>
+
+          <button class="dashboard-btn" id="goDashboard">
+            Open Dashboard
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="dashboardPage" class="page">
+
+    <div class="dashboard">
+
+      <div class="sidebar">
+
+        <h2>🚦 Traffic AI</h2>
+
+        <ul>
+          <li class="active">Dashboard</li>
+          <li>Analytics</li>
+          <li>Predictions</li>
+          <li>Traffic Zones</li>
+          <li>Settings</li>
+        </ul>
+
+      </div>
+
+      <div class="main-content">
+
+        <div class="top-bar">
+
+          <h1>Traffic Insights Dashboard</h1>
+
+          <button id="logoutBtn">
+            Logout
+          </button>
+
+        </div>
+
+        <div class="cards">
+
+          <div class="card">
+            <h3>Total Vehicles</h3>
+            <h2>12,540</h2>
+          </div>
+
+          <div class="card">
+            <h3>Heavy Traffic Areas</h3>
+            <h2>18</h2>
+          </div>
+
+          <div class="card">
+            <h3>Average Speed</h3>
+            <h2>42 km/h</h2>
+          </div>
+
+          <div class="card">
+            <h3>Accident Alerts</h3>
+            <h2>5</h2>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
