@@ -2,14 +2,27 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
   <title>Smart Traffic AI System</title>
 
-  <link rel="stylesheet" href="style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
+
+  <!-- ================= LOGIN PAGE ================= -->
 
   <section id="loginPage" class="page active-page">
 
@@ -18,13 +31,13 @@
       <div class="auth-left">
 
         <div class="logo">
-          🚦 Smart Traffic AI
+          Smart Traffic AI
         </div>
 
-        <h1>Welcome Back</h1>
+        <h1>Welcome</h1>
 
         <p>
-          Login to access AI traffic prediction and analytics dashboard.
+          AI powered traffic monitoring & smart route analytics system.
         </p>
 
       </div>
@@ -39,12 +52,12 @@
 
             <div class="input-group">
               <label>Email</label>
-              <input type="email" placeholder="Enter your email">
+              <input type="email" required placeholder="Enter Email">
             </div>
 
             <div class="input-group">
               <label>Password</label>
-              <input type="password" placeholder="Enter password">
+              <input type="password" required placeholder="Enter Password">
             </div>
 
             <button type="submit" class="auth-btn">
@@ -55,9 +68,7 @@
 
           <p class="bottom-text">
             Don't have an account?
-            <a href="#" id="showSignup">
-              Sign Up
-            </a>
+            <a href="#" id="showSignup">Sign Up</a>
           </p>
 
         </div>
@@ -68,6 +79,8 @@
 
   </section>
 
+  <!-- ================= SIGNUP PAGE ================= -->
+
   <section id="signupPage" class="page">
 
     <div class="auth-container">
@@ -75,13 +88,13 @@
       <div class="auth-left">
 
         <div class="logo">
-          🚦 Smart Traffic AI
+          Smart Traffic AI
         </div>
 
-        <h1>Create Account</h1>
+        <h1>Welcome</h1>
 
         <p>
-          Join the AI Traffic Monitoring Platform today.
+          Join the future of intelligent traffic management.
         </p>
 
       </div>
@@ -96,17 +109,17 @@
 
             <div class="input-group">
               <label>Full Name</label>
-              <input type="text" placeholder="Enter full name">
+              <input type="text" required placeholder="Enter Full Name">
             </div>
 
             <div class="input-group">
               <label>Email</label>
-              <input type="email" placeholder="Enter email">
+              <input type="email" required placeholder="Enter Email">
             </div>
 
             <div class="input-group">
               <label>Password</label>
-              <input type="password" placeholder="Create password">
+              <input type="password" required placeholder="Create Password">
             </div>
 
             <button type="submit" class="auth-btn">
@@ -117,9 +130,7 @@
 
           <p class="bottom-text">
             Already have an account?
-            <a href="#" id="showLogin">
-              Login
-            </a>
+            <a href="#" id="showLogin">Login</a>
           </p>
 
         </div>
@@ -130,14 +141,18 @@
 
   </section>
 
+  <!-- ================= TRAFFIC PAGE ================= -->
+
   <section id="trafficPage" class="page">
 
     <div class="container">
 
+      <!-- LEFT CONTENT -->
+
       <div class="left-section">
 
         <div class="tag">
-          AI Powered Smart Traffic Analytics
+          🚀 AI Powered Smart Traffic Monitoring
         </div>
 
         <h1>
@@ -146,36 +161,50 @@
         </h1>
 
         <p>
-          Predict real-time traffic congestion using AI & machine learning.
-          Monitor traffic density, weather impact, accident alerts,
-          and intelligent route optimization.
+          Predict congestion using AI & machine learning.
+          Analyze weather conditions, detect peak hours,
+          monitor accidents, and suggest optimized routes.
         </p>
+
+        <!-- FEATURES -->
 
         <div class="features">
 
           <div class="feature-card">
             <h3>Live AI Prediction</h3>
-            <p>Instant traffic forecasting</p>
+            <p>Real-time traffic forecasting</p>
           </div>
 
           <div class="feature-card">
             <h3>Weather Analysis</h3>
-            <p>Rain & visibility impact</p>
+            <p>Rain & fog impact detection</p>
           </div>
 
           <div class="feature-card">
             <h3>Peak Hour Detection</h3>
-            <p>Rush hour monitoring</p>
+            <p>Rush hour monitoring system</p>
           </div>
 
           <div class="feature-card">
             <h3>Smart Route Suggestion</h3>
-            <p>Fastest route optimization</p>
+            <p>Fastest path recommendation</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Emergency Alerts</h3>
+            <p>Accident & roadblock alerts</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>AI Camera Monitoring</h3>
+            <p>Vehicle density detection</p>
           </div>
 
         </div>
 
       </div>
+
+      <!-- ================= TRAFFIC FORM ================= -->
 
       <div class="form-container">
 
@@ -185,11 +214,7 @@
 
             <div>
               <h2>Traffic Prediction</h2>
-              <p>Enter live traffic details</p>
-            </div>
-
-            <div class="icon">
-              🚦
+              <p>Enter live traffic data</p>
             </div>
 
           </div>
@@ -198,56 +223,48 @@
 
             <div class="input-group">
               <label>Hour</label>
-
-              <input
-                type="number"
-                id="hour"
-                placeholder="Enter hour (1-24)"
-              >
+              <input type="number" id="hour" placeholder="1-24">
             </div>
 
             <div class="input-group">
               <label>Vehicle Count</label>
-
-              <input
-                type="number"
-                id="vehicle"
-                placeholder="Enter vehicle count"
-              >
+              <input type="number" id="vehicle" placeholder="Vehicle Count">
             </div>
 
             <div class="input-group">
               <label>Average Speed</label>
-
-              <input
-                type="number"
-                id="speed"
-                placeholder="Enter average speed"
-              >
+              <input type="number" id="speed" placeholder="Average Speed">
             </div>
 
             <div class="row">
 
               <div class="input-group">
+
                 <label>Weather</label>
 
-                <select>
+                <select id="weather">
                   <option>Sunny</option>
                   <option>Rainy</option>
                   <option>Foggy</option>
                   <option>Cloudy</option>
+                  <option>Stormy</option>
+                  <option>Snowy</option>
                 </select>
+
               </div>
 
               <div class="input-group">
+
                 <label>Road Condition</label>
 
-                <select>
+                <select id="road">
                   <option>Normal</option>
                   <option>Busy</option>
                   <option>Accident</option>
                   <option>Construction</option>
+                  <option>Road Closed</option>
                 </select>
+
               </div>
 
             </div>
@@ -256,20 +273,24 @@
 
               <label>Traffic Zone</label>
 
-              <select>
+              <select id="zone">
                 <option>City Center</option>
                 <option>Highway</option>
                 <option>Residential Area</option>
                 <option>Industrial Zone</option>
+                <option>Airport Road</option>
+                <option>School Zone</option>
               </select>
 
             </div>
+
+            <!-- TRAFFIC DENSITY -->
 
             <div class="meter-box">
 
               <div class="meter-text">
                 <span>Traffic Density</span>
-                <span id="densityValue">75%</span>
+                <span id="densityValue">50%</span>
               </div>
 
               <div class="meter-bar">
@@ -277,6 +298,8 @@
               </div>
 
             </div>
+
+            <!-- BUTTONS -->
 
             <div class="button-group">
 
@@ -292,6 +315,8 @@
 
           </form>
 
+          <!-- RESULT -->
+
           <div class="result-box">
 
             <div class="result-top">
@@ -301,14 +326,20 @@
                 <h3 id="trafficStatus">Moderate Traffic</h3>
               </div>
 
-              <div class="car-icon">
-                🚗
-              </div>
-
             </div>
 
             <div class="result-message" id="resultMessage">
               AI prediction results will appear here.
+            </div>
+
+            <div class="route-box">
+
+              <h4>Suggested Route</h4>
+
+              <p id="routeSuggestion">
+                Route suggestion will appear here.
+              </p>
+
             </div>
 
           </div>
@@ -325,57 +356,478 @@
 
   </section>
 
+  <!-- ================= DASHBOARD PAGE ================= -->
 
   <section id="dashboardPage" class="page">
 
     <div class="dashboard">
 
+      <!-- ================= SIDEBAR ================= -->
+
       <div class="sidebar">
 
-        <h2>🚦 Traffic AI</h2>
+        <div class="logo">
+          Smart Traffic AI
+        </div>
 
         <ul>
-          <li class="active">Dashboard</li>
-          <li>Analytics</li>
-          <li>Predictions</li>
-          <li>Traffic Zones</li>
-          <li>Settings</li>
+
+          <li
+            class="menu active"
+            data-section="dashboardSection"
+          >
+            Dashboard
+          </li>
+
+          <li
+            class="menu"
+            data-section="analyticsSection"
+          >
+            Analytics
+          </li>
+
+          <li
+            class="menu"
+            data-section="predictionsSection"
+          >
+            Predictions
+          </li>
+
+          <li
+            class="menu"
+            data-section="zonesSection"
+          >
+            Traffic Zones
+          </li>
+
+          <li
+            class="menu"
+            data-section="settingsSection"
+          >
+            Settings
+          </li>
+
         </ul>
 
       </div>
 
+      <!-- ================= MAIN CONTENT ================= -->
+
       <div class="main-content">
 
-        <div class="top-bar">
+        <!-- ================= DASHBOARD ================= -->
 
-          <h1>Traffic Insights Dashboard</h1>
+        <div
+          id="dashboardSection"
+          class="dashboard-section"
+        >
 
-          <button id="logoutBtn">
-            Logout
-          </button>
+          <div class="top-bar">
+
+            <h1>
+              Traffic Insights Dashboard
+            </h1>
+
+            <button
+              class="logout-btn"
+              id="logoutBtn"
+            >
+              Logout
+            </button>
+
+          </div>
+
+          <!-- CARDS -->
+
+          <div class="cards">
+
+            <div class="card">
+              <h3>Total Vehicles</h3>
+              <h2 id="vehicleCounter">12,540</h2>
+            </div>
+
+            <div class="card">
+              <h3>Heavy Traffic Areas</h3>
+              <h2>18</h2>
+            </div>
+
+            <div class="card">
+              <h3>Average Speed</h3>
+              <h2>42 km/h</h2>
+            </div>
+
+            <div class="card">
+              <h3>Accident Alerts</h3>
+              <h2>5</h2>
+            </div>
+
+          </div>
+
+          <!-- CHARTS -->
+
+          <div class="chart-grid">
+
+            <div class="chart-card">
+
+              <h3>
+                Traffic Density Analytics
+              </h3>
+
+              <canvas id="trafficChart"></canvas>
+
+            </div>
+
+            <div class="chart-card">
+
+              <h3>
+                Traffic Distribution
+              </h3>
+
+              <canvas id="pieChart"></canvas>
+
+            </div>
+
+            <div class="chart-card">
+
+              <h3>
+                Peak Hour Predictions
+              </h3>
+
+              <canvas id="lineChart"></canvas>
+
+            </div>
+
+            <div class="chart-card">
+
+              <h3>
+                Traffic Zone Analysis
+              </h3>
+
+              <canvas id="zoneChart"></canvas>
+
+            </div>
+
+          </div>
 
         </div>
 
-        <div class="cards">
+        <!-- ================= ANALYTICS ================= -->
 
-          <div class="card">
-            <h3>Total Vehicles</h3>
-            <h2>12,540</h2>
+        <div
+          id="analyticsSection"
+          class="dashboard-section hidden"
+        >
+
+          <h1 class="section-title">
+            Analytics Overview
+          </h1>
+
+          <div class="chart-grid">
+
+            <div class="chart-card">
+
+              <h3>
+                Vehicle Type Analysis
+              </h3>
+
+              <canvas id="vehicleChart"></canvas>
+
+            </div>
+
+            <div class="chart-card">
+
+              <h3>
+                Monthly Traffic Trends
+              </h3>
+
+              <canvas id="monthlyChart"></canvas>
+
+            </div>
+
           </div>
 
-          <div class="card">
-            <h3>Heavy Traffic Areas</h3>
-            <h2>18</h2>
+          <div class="cards analytics-cards">
+
+            <div class="card">
+              <h3>Peak Hour</h3>
+              <h2>6 PM</h2>
+            </div>
+
+            <div class="card">
+              <h3>Congestion Rate</h3>
+              <h2>72%</h2>
+            </div>
+
+            <div class="card">
+              <h3>Road Utilization</h3>
+              <h2>88%</h2>
+            </div>
+
+            <div class="card">
+              <h3>Emergency Cases</h3>
+              <h2>12</h2>
+            </div>
+
           </div>
 
-          <div class="card">
-            <h3>Average Speed</h3>
-            <h2>42 km/h</h2>
+        </div>
+
+        <!-- ================= PREDICTIONS ================= -->
+
+        <div
+          id="predictionsSection"
+          class="dashboard-section hidden"
+        >
+
+          <h1 class="section-title">
+            AI Traffic Predictions
+          </h1>
+
+          <div class="prediction-box">
+
+            <h2>
+              Next Hour Prediction
+            </h2>
+
+            <p>
+              Heavy congestion expected
+              near City Center between
+              6 PM - 8 PM.
+            </p>
+
+            <div class="prediction-meter">
+              <div class="prediction-fill"></div>
+            </div>
+
+            <span>
+              AI Prediction Accuracy: 92%
+            </span>
+
           </div>
 
-          <div class="card">
-            <h3>Accident Alerts</h3>
-            <h2>5</h2>
+          <div class="cards">
+
+            <div class="card">
+              <h3>Weather Impact</h3>
+              <h2>Rain Alert</h2>
+            </div>
+
+            <div class="card">
+              <h3>Rush Hour</h3>
+              <h2>Detected</h2>
+            </div>
+
+            <div class="card">
+              <h3>Road Condition</h3>
+              <h2>Moderate</h2>
+            </div>
+
+            <div class="card">
+              <h3>AI Suggestion</h3>
+              <h2>Use Highway B</h2>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ================= TRAFFIC ZONES ================= -->
+
+        <div
+          id="zonesSection"
+          class="dashboard-section hidden"
+        >
+
+          <h1 class="section-title">
+            Traffic Zones Monitoring
+          </h1>
+
+          <div class="zone-grid">
+
+            <div class="zone-card heavy">
+
+              <h3>City Center</h3>
+
+              <p>
+                Heavy Traffic
+              </p>
+
+            </div>
+
+            <div class="zone-card moderate">
+
+              <h3>Highway</h3>
+
+              <p>
+                Moderate Traffic
+              </p>
+
+            </div>
+
+            <div class="zone-card low">
+
+              <h3>Residential Area</h3>
+
+              <p>
+                Low Traffic
+              </p>
+
+            </div>
+
+            <div class="zone-card heavy">
+
+              <h3>Industrial Zone</h3>
+
+              <p>
+                Road Construction
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="alerts-box">
+
+            <h2>
+              Emergency Alerts
+            </h2>
+
+            <p>
+              ⚠ Accident detected near Highway Zone
+            </p>
+
+            <p>
+              ⚠ Construction work near Industrial Area
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- ================= SETTINGS ================= -->
+
+        <div
+          id="settingsSection"
+          class="dashboard-section hidden"
+        >
+
+          <h1 class="section-title">
+            Settings
+          </h1>
+
+          <div class="settings-box">
+
+            <div class="setting-item">
+
+              <label>
+                Dark Mode
+              </label>
+
+              <input
+                type="checkbox"
+                checked
+              />
+
+            </div>
+
+            <div class="setting-item">
+
+              <label>
+                Enable Notifications
+              </label>
+
+              <input
+                type="checkbox"
+                checked
+              />
+
+            </div>
+
+            <div class="setting-item">
+
+              <label>
+                Prediction Sensitivity
+              </label>
+
+              <input
+                type="range"
+                min="1"
+                max="100"
+              />
+
+            </div>
+
+            <div class="setting-item">
+
+              <label>
+                Language
+              </label>
+
+              <select id="languageSelect">
+
+                <option>English</option>
+                <option>Hindi</option>
+                <option>Marathi</option>
+                <option>Gujarati</option>
+                <option>Tamil</option>
+                <option>Telugu</option>
+                <option>Kannada</option>
+                <option>Malayalam</option>
+                <option>Punjabi</option>
+                <option>Bengali</option>
+                <option>Urdu</option>
+                <option>Spanish</option>
+                <option>French</option>
+                <option>German</option>
+                <option>Japanese</option>
+                <option>Chinese</option>
+                <option>Russian</option>
+                <option>Arabic</option>
+                <option>Portuguese</option>
+                <option>Korean</option>
+
+              </select>
+
+            </div>
+
+            <div class="setting-item">
+
+              <label>
+                Auto AI Updates
+              </label>
+
+              <input
+                type="checkbox"
+                checked
+              />
+
+            </div>
+
+            <div class="setting-item">
+
+              <label>
+                Live Camera Monitoring
+              </label>
+
+              <input
+                type="checkbox"
+                checked
+              />
+
+            </div>
+
+            <div class="setting-item">
+
+              <label>
+                Sound Alerts
+              </label>
+
+              <input
+                type="checkbox"
+              />
+
+            </div>
+
           </div>
 
         </div>
@@ -385,6 +837,8 @@
     </div>
 
   </section>
+
+  <!-- JS -->
 
   <script src="script.js"></script>
 
